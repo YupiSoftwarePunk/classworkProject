@@ -2,43 +2,43 @@
 #include <cstdlib>
 //функции
 
-//float Sum(float num1, float num2)
-//{
-//	return num1 + num2;
-//}
-//
-//float Subtraction(float num1, float num2)
-//{
-//	return num1 - num2;
-//}
-//
-//float Multiply(float num1, float num2)
-//{
-//	return num1 * num2;
-//}
-//
-//float Division(float num1, float num2)
-//{
-//	if (num2 == 0)
-//	{
-//		return 1;
-//	}
-//	return num1 / num2;
-//}
-//
-//float Percent(float num1, float num2)
-//{
-//	return num1 * num2 / 100;
-//}
+float Sum(float num1, float num2)
+{
+	return num1 + num2;
+}
+float Subtraction(float num1, float num2)
+{
+	return num1 - num2;
+}
+float Multiply(float num1, float num2)
+{
+	return num1 * num2;
+}
+float Division(float num1, float num2)
+{
+	if (num2 == 0)
+	{
+		return 1;
+	}
+	return num1 / num2;
+}
+float Percent(float num1, float num2)
+{
+	return num1 * num2 / 100;
+}
 
-//void SetArray(int arr[], int size);
-//void PrintArray(int arr[], int size);
+
+
+void SetArray(int arr[], int size);
+void PrintArray(int arr[], int size);
+
 
 void NewArray(int arr[], int size);
 void PrintNewArray(int arr[], int size);
 
 void max(int  arr[], int size, int max, int maxIndex);
 void min(int  arr[], int size, int min, int minIndex);
+
 
 using namespace std;
 
@@ -52,19 +52,22 @@ void main()
 	int max1 = INT_MIN, min1 = INT_MAX;
 	int minIndex{}, maxIndex{};
 
-	/*cout << "Сумма = " << Sum(11, 9)<<endl;
+	cout << "Сумма = " << Sum(11, 9)<<endl;
 	cout << "Разность = " << Subtraction(11, 9)<<endl;
 	cout << "Произведение = " << Multiply(11, 9) << endl;
 	cout << " Частное = " << Division(11, 9) << endl;
-	cout << "Процент числа = " << Percent(11, 9) << endl;*/
-	/*SetArray(arr, size);
-	PrintArray(arr, size);*/
+	cout << "Процент числа = " << Percent(11, 9) << endl;
+
+	SetArray(arr, size);
+	PrintArray(arr, size);
+
+
 	NewArray(arr, size);
 	PrintNewArray(arr, size);
 	max(arr, size, max1, maxIndex);
 	min(arr, size, min1, minIndex);
-
 }
+
 
 void NewArray(int arr[], int size)
 {
@@ -111,21 +114,18 @@ void min(int arr[], int size, int min1, int minIndex)
 
 
 
+void SetArray(int arr[], int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		arr[i] = rand() % 10;
+	}
+}
 
-
-
-//void SetArray(int arr[], int size)
-//{
-//	for (int i = 0; i < size; i++)
-//	{
-//		arr[i] = rand() % 10;
-//	}
-//}
-//
-//void PrintArray(int arr[], int size)
-//{
-//	for (int i = 0; i < size; i++)
-//	{
-//		cout<< arr[i]<<" ";
-//	}
-//}
+void PrintArray(int arr[], int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		cout<< arr[i]<<" ";
+	}
+}
