@@ -18,6 +18,10 @@ float Multiply(float num1, float num2)
 
 float Division(float num1, float num2)
 {
+	if (num2 == 0)
+	{
+		return 1;
+	}
 	return num1 / num2;
 }
 
